@@ -1,0 +1,47 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+src/*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Environment / secrets =====
+.env
+!.env.example
+
+# ===== Project outputs (PRD §7) =====
+logs/
+outputs/
+
+# ===== pytest =====
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Misc =====
+*.tmp
+*.bak

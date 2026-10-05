@@ -1,0 +1,32 @@
+batch_name: test_gemini_free
+research_question: RQ1
+n_runs: 1
+themes_file: data/themes_test.json
+
+conversation:
+  temperature: 0.7
+  system_prompt_file: data/prompts/conversation_system.txt
+  max_tokens: 64
+
+questionnaire:
+  temperature: 0
+  repeats: 1
+  snapshots: [3]
+  measure_agents: [A]
+  include: all
+
+agent_a:
+  provider: google
+  base_url: https://generativelanguage.googleapis.com/v1beta/openai/
+  api_key_env: GOOGLE_API_KEY
+  model: gemini-3.8-flash
+  size_group: medium
+  family: gemini
+agent_b:
+  same_as: agent_a
+
+persona_condition: none
+runtime:
+  concurrency: 1
+  max_retries: 5
+  log_dir: logs

@@ -1,0 +1,33 @@
+batch_name: mock_batch
+research_question: RQ1
+n_runs: 2
+themes_file: data/themes.json
+
+conversation:
+  temperature: 0.7
+  system_prompt_file: data/prompts/conversation_system.txt
+  max_tokens: 256
+
+questionnaire:
+  temperature: 0
+  repeats: 10
+  snapshots: [12, 24, 36]
+  measure_agents: [A, B]
+  include: all
+
+agent_a:
+  provider: mock
+  model: mock-gpt
+  api_key_env: DUMMY_KEY
+  size_group: medium
+  family: gpt
+
+agent_b:
+  same_as: agent_a
+
+persona_condition: none
+
+runtime:
+  concurrency: 1
+  max_retries: 3
+  log_dir: logs
